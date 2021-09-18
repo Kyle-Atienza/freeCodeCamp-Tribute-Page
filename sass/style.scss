@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&family=Open+Sans&family=Prata&display=swap');
+//font-faces
+/*
+font-family: 'Archivo', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Prata', serif;
+*/
+
+//colors
+$black: #000000;
+$white: #ffffff;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
+h1 {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 10rem;
+    margin: 0;
+}
+h2 {
+    font-family: 'Archivo', sans-serif;
+    font-weight: 700;
+    font-size: 5rem;
+}
+h3 {
+    font-family: 'Archivo', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+}
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.2rem;
+}
+
+.hero {
+    min-height: 100vh;
+
+    .container {
+        width: 80vw;
+        margin: 0 auto;
+        position: relative;
+        height: 100vh;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        z-index: 3;
+
+        margin: 2em 0;
+
+        p {
+            font-family: 'Prata', serif;
+            letter-spacing: 0.2em;
+            font-size: 1.5rem;
+            margin-left: 2em;
+        }
+    }
+    #img-div {
+        display: grid;
+        position: relative;
+        align-content: end;
+        justify-content: center;
+        // height: 100%;
+
+        #image {
+            position: relative;
+            z-index: 2;
+            height: auto;
+            max-width: 100%;
+            object-fit: cover;
+        }
+        #img-caption {
+            position: absolute;
+            display: grid;
+            gap: 1em;
+            right: 10em;
+            top: 30%;
+            z-index: 2;
+
+            list-style: none;
+
+            li {
+                font-family: 'Open Sans', sans-serif;
+                text-transform: uppercase;
+                letter-spacing: 0.5em;
+                font-size: 1.5rem;
+                color: $white;
+            }
+        }
+        .background {
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 80vh;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+            background: $black;
+            border-radius: 20px 20px 0 0;
+        }
+    }
+}
+
+#tribute-info {
+    padding: 20vh 0 0;
+
+    .container {
+        width: 60vw;
+        margin: 0 auto;
+        display: flex;
+        gap: 3em;
+
+        & > * {
+            flex: 1;
+        }
+        p {
+            margin-bottom: 1em;
+            //text-indent: 1em;
+            text-align: end;
+        }
+    }
+}
+
+.involvements {
+    padding: 20vh 0;
+
+    .title {
+        margin-bottom: 2em;
+    }
+    .container {
+        width: 60vw;
+        margin: 0 auto;
+        display: grid;
+        gap: 2em;
+    }
+    .row {
+        display: flex;
+        gap: 3em;
+
+        .name {
+            flex: 2;
+        }
+        .description {
+            flex: 4;
+        }
+    }
+    .reference {
+        display: grid;
+        place-items: center;
+        margin-top: 5em;
+    }
+}
+
+footer {
+    .container {
+        width: 80vw;
+        margin: 0 auto;
+        position: relative;
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        background: $black;
+        border-radius: 20px 20px 0 0;
+
+        color: $white;
+    }
+    .back-top {
+        color: $white;
+        font-size: 1em;
+        font-weight: 700;
+        text-decoration: none;
+        font-family: 'Archivo', sans-serif;
+    }
+}
